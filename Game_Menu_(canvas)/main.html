@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="title">Welcome to Tank Battle!</div>
+    <div id="one_player" class="but" onclick="runGame(1)" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'">1 Player</div>
+    <div id="two_player" class="but" onclick="runGame(2)" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'">2 Player</div>
+    <div id="autors">
+        Game Design: Arman Vardanyan <br><br>
+        Map Design: Arman Vardanyan <br><br>
+        Audio Designer: Arman Vardanyan <br><br>
+        Music and Sound Effects: Arman Vardanyan <br><br>
+        Testing: Arman Vardanyan <br><br>
+        Producer: Arman Vardanyan <br><br>
+        Programmer: Arman Vardanyan <br><br>
+        Sponsor: FIIT STU
+    </div>
+    <div id="instruction_btn" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'" onclick="showInstruction()">Instruction</div>
+    <div id="autors_btn" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'" onclick="showAutors()">Autors</div>
+    <div id="instruction">
+        <div id="first_player">
+            <h2>First Player</h2>
+            <div>
+                <button>w</button>
+            </div>
+            <div>
+                <button>a</button>
+                <button>s</button>
+                <button>d</button>
+                <br><br>Movement<br><br>
+                <button>x</button>
+                <br><br>shooting
+            </div>
+        </div>
+        <div id="second_player">
+            <h2>Second Player</h2>
+            <div>
+                <button>i</button>
+            </div>
+            <div>
+                <button>j</button>
+                <button>k</button>
+                <button>l</button>
+                <br><br>Movement<br><br>
+                <button>/</button>
+                <br><br>shooting
+            </div>
+        </div>
+    </div>
+    <div id="game">
+        <canvas id="myCanvas">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+    <div id="gameover">Game Over!</div>
+    <div id="gameover_btn" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'" onclick="gameOver()">Game Over</div>
+    <div id="back_btn" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'" onclick="goBack()">Back</div>
+    <div id="audioDiv">
+        <button class="audio_btn" id="audio_off" onclick="audioOn()" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'">
+            Audio
+        </button>
+        <button class="audio_btn" id="audio_on" onclick="audioOff()" onmouseover="this.style.backgroundColor = 'rgb(198, 198, 198)'" onmouseout="this.style.backgroundColor = 'rgb(227, 227, 227)'">
+            <strike>Audio</strike>
+        </button>
+    </div>
+    <audio id="menu_audio" src="./media/menu_audio.mp3">Your browser does not support the audio element.</audio>
+    <script src="./game.js"></script>
+    <script src="./menu.js"></script>
+</body>
+</html>
